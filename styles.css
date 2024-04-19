@@ -1,0 +1,133 @@
+/* Reset default styles */
+body, h1, p, input, button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles for the body element */
+body {
+  background: linear-gradient(to bottom right, #4e54c8, #8f94fb, #e1e5f2); /* Gradient background */
+  color: #333; /* Text color */
+  min-height: 100vh; /* Ensure the background covers the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+}
+
+/* Container styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+p {
+  color: #666;
+}
+
+/* Link styles */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Input and button styles */
+input[type="text"],
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for weather data display */
+#weatherData {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  input[type="text"],
+  button {
+      padding: 8px;
+      font-size: 14px;
+  }
+}
+
+/* Additional styles for different types of messages */
+.info {
+  margin-top: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.error {
+  margin-top: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.success {
+  margin-top: 20px;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Loading indicator styles */
+.loading {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.loading::after {
+  content: "Loading...";
+  display: inline-block;
+  margin-left: 5px;
+  animation: spin 1s infinite linear;
+}
+
+/* Keyframe animation for loading spinner */
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}

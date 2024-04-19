@@ -1,0 +1,44 @@
+<!-- HTML document declaration and language setting -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character set and viewport settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the webpage -->
+  <title>Weather App - Weather</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Heading for the webpage -->
+  <h1>Weather App - Check Weather</h1>
+  <!-- Main Vue app container -->
+  <div id="app">
+    <!-- Input fields for latitude and longitude -->
+    <label for="latitude">Latitude:</label>
+    <input type="text" id="latitude" name="latitude" v-model="latitude">
+
+    <label for="longitude">Longitude:</label>
+    <input type="text" id="longitude" name="longitude" v-model="longitude">
+
+    <!-- Button to trigger weather data fetch -->
+    <button @click="getWeather">Get Weather</button>
+    <!-- Display area for weather data -->
+    <div id="weatherData">
+      <h2>{{ cityName }}</h2> <!-- Display city name -->
+      <p>{{ weatherDescription }}</p> <!-- Display weather description -->
+      <p>Temperature: {{ temperature }}°C</p> <!-- Display temperature -->
+      <p>Humidity: {{ humidity }}%</p> <!-- Display humidity -->
+      <p>Latitude: {{ latitude }}</p> <!-- Display latitude -->
+      <p>Longitude: {{ longitude }}</p> <!-- Display longitude -->
+    </div>
+  </div>
+  
+  <!-- Script tags for Vue and Axios libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- Script tag for the main application logic -->
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
